@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spire.PDF" Version="8.6.1" />
+    <PackageReference Include="Syncfusion.DocIO.Net.Core" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.DocIORenderer.Net.Core" Version="20.2.0.36" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrintCost.Common\PrintCost.Common.csproj" />
+    <ProjectReference Include="..\PrintCost.Contracts\PrintCost.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrintCost.Contracts\PrintCost.Contracts.csproj" />
+    <ProjectReference Include="..\PrintData.Context\PrintCost.Context.csproj" />
+    <ProjectReference Include="..\PrintData.Entities\PrintCost.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

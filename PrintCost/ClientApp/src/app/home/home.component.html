@@ -1,0 +1,42 @@
+<h3>Welcome to print(s) cost calculation application</h3>
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  <div class="form-group row">
+    <label class="col" for="name">Double Side</label>
+    <input formControlName="isDoubleSide" id="isDoubleSide" type="checkbox" class="form-control col">
+    <div class="col"></div>
+    <div class="col"></div>
+  </div>
+  <div class="form-group row mrgn-l-0">
+    <label for="file">File</label>
+    <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+    <div *ngIf="f.file.invalid && isSubmitted" class="alert alert-danger row error">
+      <div *ngIf="f.file.errors.required">File is required.</div>
+    </div>
+  </div>
+  <div class="form-group row mrgn-l-0">
+    *Support only for word and pdf.
+  </div>
+
+  <button class="btn btn-primary" type="submit">Calculate</button>
+  <button (click)="reset()" class="btn btn-reset mrgn-l-10" type="button">Reset</button>
+</form>
+<div class="container mrgn-t-10" *ngIf="showLoader">Calculating...</div>
+<div class="container mrgn-t-10" *ngIf="fileCost != undefined">
+  <div class="row">
+    <div class="col">Total Pages : {{fileCost.totalPages}}</div>
+    <div class="col">Total Cost : {{fileCost.cost}} </div>
+    <div class="col">
+      <div *ngIf="!fileCost.isDoubleSide">Single Side</div>
+      <div *ngIf="fileCost.isDoubleSide">Double Side</div>
+    </div>
+
+  </div>
+  <div class="row" *ngFor="let item of fileCost.printOutCounts">
+    <div class="col">{{item.printTypeName}} : {{item.count}}</div>
+    <div class="col">Cost : {{item.cost}} </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+
+

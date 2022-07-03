@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "data source=DESKTOP-4ECU03Q\SQLEXPRESS;Initial Catalog=PrintCostDB;Persist Security Info=False;User ID=sa;Password=pass#word1;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;" Microsoft.EntityFrameworkCore.SqlServer -context "PrintCostContext" -Force -NoPluralize -NoOnConfiguring
